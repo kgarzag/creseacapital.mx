@@ -271,6 +271,7 @@ footer{background:var(--navy);padding:56px 56px 28px;}
 
       <div class="hc-divider"></div>
       <div class="hc-row"><span class="hc-row-label">Valor garantía (USD)</span><span class="hc-row-val" id="calc-usd">—</span></div>
+      <div class="hc-row"><span class="hc-row-label">Tipo de cambio</span><span class="hc-row-val" id="calc-tc">$17.80 MXN/USD</span></div>
       <div class="hc-row"><span class="hc-row-label">Valor garantía (MXN)</span><span class="hc-row-val" id="calc-mxn-total">—</span></div>
       <div class="hc-row"><span class="hc-row-label">LTV aplicado</span><span class="hc-tag">60%</span></div>
       <div class="hc-divider"></div>
@@ -287,7 +288,8 @@ footer{background:var(--navy);padding:56px 56px 28px;}
     <script>
     (function(){
       var LTV = 0.60;
-      var TC  = 17.50;
+      var MARGEN = 0.30;
+      var TC  = 17.80;
       var btcSlider    = document.getElementById('btc-slider');
       var precioSlider = document.getElementById('precio-slider');
 
@@ -304,6 +306,7 @@ footer{background:var(--navy);padding:56px 56px 28px;}
 
         document.getElementById('btc-display').textContent        = btc.toFixed(2)+' BTC';
         document.getElementById('btc-precio-display').textContent = fmtUSD(Math.round(precio));
+        document.getElementById('calc-tc').textContent            = '$' + TC.toFixed(2) + ' MXN/USD';
         document.getElementById('calc-usd').textContent           = fmtUSD(Math.round(garantiaUSD));
         document.getElementById('calc-mxn-total').textContent     = fmtMXN(Math.round(garantiaMXN));
         document.getElementById('calc-monto').textContent         = fmtMXN(Math.round(creditoMXN));
@@ -331,7 +334,7 @@ footer{background:var(--navy);padding:56px 56px 28px;}
 
           var fxRes = await fetch('https://api.exchangerate-api.com/v4/latest/USD');
           var fxData = await fxRes.json();
-          TC = fxData.rates.MXN;
+          TC = fxData.rates.MXN + MARGEN;
 
           setSliderMax(precioSlider, btcPrice);
 
@@ -340,7 +343,7 @@ footer{background:var(--navy);padding:56px 56px 28px;}
           setStatus(true, 'Precio en tiempo real · Actualizado ' + hora);
           calc();
         } catch(e) {
-          setStatus(false, 'Precio referencial · $17.50 MXN/USD');
+          setStatus(false, 'Tipo de cambio referencial · $17.80 MXN/USD');
           calc();
         }
       }
