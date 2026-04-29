@@ -265,6 +265,106 @@ footer{background:var(--navy);padding:56px 56px 28px;}
   .sofom-bar{padding:20px 24px;}
   .footer-top{gap:32px;}
 }
+
+/* ── PROPIEDAD → BTC ── */
+.prop-btc{
+  padding:90px 56px;
+  background:linear-gradient(180deg, var(--cream) 0%, var(--cream-warm) 100%);
+  position:relative;overflow:hidden;
+}
+.prop-btc::before{
+  content:'';position:absolute;top:-80px;right:-80px;
+  width:280px;height:280px;border-radius:50%;
+  background:radial-gradient(circle, rgba(234,87,23,0.08) 0%, transparent 70%);
+  pointer-events:none;
+}
+.prop-btc-head{max-width:720px;margin-bottom:56px;position:relative;z-index:1;}
+.prop-btc-grid{
+  display:grid;grid-template-columns:1.1fr 1fr;
+  gap:56px;align-items:start;
+  position:relative;z-index:1;
+}
+.prop-btc-copy h3{
+  font-family:'EB Garamond',Georgia,serif;
+  font-size:24px;font-weight:500;color:var(--navy);
+  margin-bottom:14px;line-height:1.25;
+}
+.prop-btc-copy h3 em{color:var(--orange);font-style:italic;}
+.prop-btc-copy p.lead{
+  font-size:16px;line-height:1.8;color:rgba(29,34,67,0.72);
+  margin-bottom:28px;
+}
+.prop-btc-flow{
+  background:#fff;
+  border:1px solid rgba(29,34,67,0.08);
+  border-radius:14px;
+  padding:32px;
+  box-shadow:0 8px 32px rgba(29,34,67,0.06);
+}
+.prop-btc-flow h4{
+  font-family:'EB Garamond',Georgia,serif;
+  font-size:20px;font-weight:500;color:var(--navy);
+  margin-bottom:22px;
+}
+.prop-flow-step{
+  display:flex;align-items:flex-start;gap:14px;
+  padding:14px 0;
+  border-bottom:1px solid rgba(29,34,67,0.06);
+}
+.prop-flow-step:last-child{border-bottom:none;padding-bottom:0;}
+.prop-flow-step:first-child{padding-top:0;}
+.prop-flow-num{
+  flex-shrink:0;
+  width:28px;height:28px;border-radius:50%;
+  background:var(--orange);color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  font-size:13px;font-weight:600;
+  font-family:'DM Sans',sans-serif;
+}
+.prop-flow-text strong{
+  display:block;font-size:14.5px;color:var(--navy);
+  font-weight:500;margin-bottom:3px;
+}
+.prop-flow-text span{
+  font-size:13px;color:rgba(29,34,67,0.6);line-height:1.6;
+}
+.prop-feats{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:12px;margin-top:28px;
+}
+.prop-feat{
+  background:rgba(255,255,255,0.6);
+  border:1px solid rgba(29,34,67,0.08);
+  border-radius:10px;
+  padding:16px 18px;
+}
+.prop-feat-icon{
+  width:32px;height:32px;border-radius:7px;
+  background:var(--navy);
+  display:flex;align-items:center;justify-content:center;
+  margin-bottom:10px;
+}
+.prop-feat strong{
+  display:block;font-size:14px;color:var(--navy);
+  font-weight:500;margin-bottom:3px;
+}
+.prop-feat span{font-size:12.5px;color:rgba(29,34,67,0.6);line-height:1.5;}
+.prop-cta-row{
+  margin-top:32px;display:flex;gap:12px;flex-wrap:wrap;
+}
+.prop-note{
+  margin-top:24px;padding:14px 18px;
+  background:rgba(29,34,67,0.04);
+  border-left:3px solid var(--orange);
+  border-radius:4px;
+  font-size:13px;line-height:1.6;color:rgba(29,34,67,0.7);
+}
+.prop-note strong{color:var(--navy);}
+@media (max-width:880px){
+  .prop-btc{padding:60px 24px;}
+  .prop-btc-grid{grid-template-columns:1fr;gap:32px;}
+  .prop-feats{grid-template-columns:1fr;}
+}
 </style>
 </head>
 <body>
@@ -277,6 +377,7 @@ footer{background:var(--navy);padding:56px 56px 28px;}
   <ul class="nav-links">
     <li><a href="#como-funciona">Cómo funciona</a></li>
     <li><a href="#beneficios">Beneficios</a></li>
+    <li><a href="#propiedad-btc">Propiedad → BTC</a></li>
     <li><a href="#contacto">Contacto</a></li>
     <li><a href="#contacto" class="nav-cta">Solicitar crédito</a></li>
   </ul>
@@ -509,6 +610,118 @@ footer{background:var(--navy);padding:56px 56px 28px;}
   </div>
 </section>
 
+
+<!-- PROPIEDAD → BTC -->
+<section class="prop-btc" id="propiedad-btc">
+  <div class="prop-btc-head">
+    <div class="section-label">Nuevo servicio</div>
+    <div class="section-title">Compra Bitcoin con tu <em>propiedad</em> como garantía.</div>
+    <p class="section-sub">¿Tienes una propiedad a tu nombre y quieres entrar al mundo de los activos digitales? Pon tu propiedad en garantía, adquiere Bitcoin a precio de mercado y consérvalo bajo custodia compartida — sin descapitalizarte.</p>
+  </div>
+
+  <div class="prop-btc-grid">
+    <div class="prop-btc-copy">
+      <h3>Tu patrimonio inmobiliario, <em>convertido en exposición digital.</em></h3>
+      <p class="lead">Diseñado para personas con propiedad libre de gravamen que desean diversificar su patrimonio hacia Bitcoin sin tener que vender, hipotecar de forma tradicional, ni desembolsar capital. La propiedad respalda la operación; el activo digital permanece en custodia compartida hasta que liquides.</p>
+
+      <div class="prop-feats">
+        <div class="prop-feat">
+          <div class="prop-feat-icon">
+            <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
+              <path d="M3 9l7-5 7 5v8a1 1 0 01-1 1H4a1 1 0 01-1-1V9z" stroke="#fcf5b9" stroke-width="1.4" fill="none" stroke-linejoin="round"/>
+              <path d="M8 18v-5h4v5" stroke="#fcf5b9" stroke-width="1.4" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <strong>Conservas tu propiedad</strong>
+          <span>Sigue siendo tuya. Solo queda en garantía mediante fideicomiso.</span>
+        </div>
+        <div class="prop-feat">
+          <div class="prop-feat-icon">
+            <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
+              <path d="M10 2v16M5 6l5-4 5 4M5 14l5 4 5-4" stroke="#fcf5b9" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            </svg>
+          </div>
+          <strong>Custodia compartida</strong>
+          <span>Multifirma institucional. </span>
+        </div>
+        <div class="prop-feat">
+          <div class="prop-feat-icon">
+            <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
+              <circle cx="10" cy="10" r="7" stroke="#fcf5b9" stroke-width="1.4" fill="none"/>
+              <path d="M10 6v4l3 2" stroke="#fcf5b9" stroke-width="1.4" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <strong>Sin descapitalizarte</strong>
+          <span>Compras BTC a precio de mercado sin liquidar otros activos.</span>
+        </div>
+        <div class="prop-feat">
+          <div class="prop-feat-icon">
+            <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
+              <rect x="3" y="3" width="14" height="14" rx="3" stroke="#fcf5b9" stroke-width="1.4" fill="none"/>
+              <path d="M7 10l2.5 2.5L13 7.5" stroke="#fcf5b9" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <strong>Contrato regulado</strong>
+          <span>Operación documentada bajo el marco legal de SOFOM E.N.R.</span>
+        </div>
+      </div>
+
+      <div class="prop-note">
+        <strong>Importante:</strong> el valor de tu propiedad se evalúa por avalúo profesional. Se da un crédito de hasta el 70% del valor de la propiedad. Las condiciones, plazos y tasa se establecen en contrato individualizado.
+      </div>
+
+      <div class="prop-cta-row">
+        <button class="btn-primary" onclick="document.getElementById('contacto').scrollIntoView({behavior:'smooth'})">Quiero comprar BTC con mi propiedad</button>
+        <button class="btn-ghost" style="color:var(--navy);border-color:rgba(29,34,67,0.25);" onclick="document.getElementById('contacto').scrollIntoView({behavior:'smooth'})">Hablar con un asesor</button>
+      </div>
+    </div>
+
+    <div class="prop-btc-flow">
+      <h4>¿Cómo funciona?</h4>
+
+      <div class="prop-flow-step">
+        <div class="prop-flow-num">1</div>
+        <div class="prop-flow-text">
+          <strong>Avalúo de tu propiedad</strong>
+          <span>Realizamos un avalúo profesional para determinar el valor de la propiedad.</span>
+        </div>
+      </div>
+
+      <div class="prop-flow-step">
+        <div class="prop-flow-num">2</div>
+        <div class="prop-flow-text">
+          <strong>Propiedad en garantía</strong>
+          <span>Se crea un fideicomiso donde la propiedad queda como garantía. La propiedad sigue siendo tuya — queda como respaldo de la operación.</span>
+        </div>
+      </div>
+
+      <div class="prop-flow-step">
+        <div class="prop-flow-num">3</div>
+        <div class="prop-flow-text">
+          <strong>Compra de Bitcoin</strong>
+          <span>Con el crédito otorgado se adquiere el BTC a precio de mercado, con liquidación transparente y comprobantes.</span>
+        </div>
+      </div>
+
+      <div class="prop-flow-step">
+        <div class="prop-flow-num">4</div>
+        <div class="prop-flow-text">
+          <strong>Custodia compartida</strong>
+          <span>Tu Bitcoin se resguarda en wallet multifirma de custodia institucional. Acceso conjunto, transparencia total.</span>
+        </div>
+      </div>
+
+      <div class="prop-flow-step">
+        <div class="prop-flow-num">5</div>
+        <div class="prop-flow-text">
+          <strong>Liquidación y entrega</strong>
+          <span>Al cumplir las condiciones del contrato, tu propiedad se libera y los BTC pasan a tu wallet personal.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- SOFOM NOTICE -->
 <div class="sofom-bar">
   <div class="sofom-dot"></div>
@@ -607,4 +820,8 @@ footer{background:var(--navy);padding:56px 56px 28px;}
     </div>
   </div>
   <div class="footer-bottom">
-    <p>© 2025 Cr
+    <p>© 2025 Cresea Capital — SOFOM E.N.R. Todos los derechos reservados.</p>
+  </div>
+</footer>
+</body>
+</html>
